@@ -11,7 +11,7 @@
     <div class="bg-[#F5F1E6] rounded-2xl border border-[#D4C5AC] shadow-sm px-10 py-8 max-w-4xl mx-auto">
       <div class="flex flex-wrap justify-center items-center gap-10">
         <img src="/src/assets/images/omniyat.png" alt="Omniyat"   class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
-        <img src="/src/assets/images/Binghatti.png" alt="Ellington" class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
+        <img src="/src/assets/images/binghatti.png" alt="Ellington" class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
         <img src="/src/assets/images/damac.png" alt="Binghatti" class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
         <img src="/src/assets/images/ellington.png" alt="Sobha"     class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
         <img src="/src/assets/images/emaar.png" alt="Damac"     class="h-10 mx-auto opacity-80 hover:opacity-100 transition" />
