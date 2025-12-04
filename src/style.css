@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* inside your style.css or a new global css */
+.fade-up-start {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+.fade-up-end {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+:root {
+  --sand: 35 40% 85%;
+  --cream: 40 50% 94%; 
+  --card-foreground: 35 15% 30%; /* example color */
+}
+.bg-cream\/10 {
+  background-color: hsl(var(--cream) / 0.1);
+}
+/* Custom background utility */
+.bg-sand {
+  background-color: hsl(var(--sand));
+}
+.bg-cream {
+  background-color: hsl(var(--cream));
+}
+
+.border-custom {
+  border-color: hsl(var(--border));
+}
+.bg-shadow {
+  background-color: hsl(var(--shadow) / .9);
+}
+.text-cream {
+  color: hsl(var(--cream));
+}
+.card-foreground {
+  color: hsl(var(--card-foreground));
+}
+
+@media (max-width: 640px) {
+  a[aria-label="Chat on WhatsApp"] {
+    right: 1rem;
+    bottom: 1rem;
+    width: 56px;
+    height: 56px;
+  }
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erakproperties.ae/sitemap.xml
+Host: https://erakproperties.ae
