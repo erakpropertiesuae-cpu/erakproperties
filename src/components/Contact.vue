@@ -198,8 +198,8 @@ const submitForm = async () => {
 
   try {
     await emailjs.send(
-      'service_0nu31ea',
-      'template_qw209j9',
+      'service_5z8acce',
+      'template_c72ugkl',
       {
         full_name: formData.value.fullName,
         email: formData.value.email,
@@ -208,7 +208,7 @@ const submitForm = async () => {
         message: formData.value.message,
         source: 'ERAK Properties Website'
       },
-      'iouQytZavL2MHc0VX'
+      '5KGcfW2dwXQhSMsOx'
     )
 
     formMessage.value = {
