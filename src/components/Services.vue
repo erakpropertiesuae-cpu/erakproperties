@@ -1,5 +1,5 @@
 <template>
-<section id="services" class="fade-up bg-[#F8F5EC] py-16">
+<section id="services" class="fade-up bg-cream py-16">
   <div class="max-w-7xl mx-auto px-6 md:px-8 bg-cream">
     <h3 class="text-4xl font-extrabold text-[#382E25] text-center mb-6">What We Do for Investors</h3>
     <p class="text-center text-[#87745D] mb-12 max-w-2xl mx-auto">
