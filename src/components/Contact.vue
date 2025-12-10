@@ -1,11 +1,24 @@
 <template>
-<section id="contact" class="fade-up bg-[#382E25] text-[#F5F1E6] py-16">
+<section id="contact" class="fade-up bg-clay text-[#F5F1E6] py-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="text-center space-y-4 mb-16">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-cream">
+      Let's Talk About Your Next Investment
+    </h2>
+
+    <p class="text-xl text-cream/90 max-w-2xl mx-auto">
+      Share a few details and our team will reach out with suitable opportunities and next steps.
+    </p>
+  </div>
+</div>
+
   <div class="max-w-7xl mx-auto px-6 md:px-8">
-    <div class="grid md:grid-cols-2 gap-12 items-start">
+    <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto scroll-fade-in is-visible">
+      <div class="space-y-8">
 
       <!-- Left Column -->
       <div class="rounded-lg border text-card-foreground shadow-sm p-8 bg-cream/10 backdrop-blur-sm border-cream/20">
-        <h2 class="text-3xl font-extralight mb-4">Let's Talk About Your Next Investment</h2>
+        <h3 class="text-2xl font-semibold text-cream mb-6">Get in Touch</h3>
         <p class="text-[#D4C5AC] mb-8 text-lg">
           Share a few details and our team will reach out with suitable opportunities and next steps.
         </p>
@@ -54,16 +67,25 @@
         </div>
 
         <!-- WhatsApp Button -->
+         <div class="mt-8 pt-8 border-t border-white/30">
         <button 
           @click="openWhatsAppChat"
-          class="px-6 py-3 rounded-lg bg-shadow border border-white text-white font-semibold 
-                 hover:opacity-90 transition-colors flex items-center gap-2 mb-6"
+          class="px-6 py-3 rounded-xl
+    bg-[#382E25] border border-white/20
+    text-white font-semibold
+    flex items-center justify-center gap-2
+    transition-all duration-300 ease-out
+    hover:-translate-y-0.5
+    hover:bg-[#382E25]
+    hover:shadow-lg hover:shadow-black/30
+    active:translate-y-0 gap-2 mb-6"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
           </svg>
           Contact Us on WhatsApp
         </button>
+        </div>
 
         <!-- Social Media -->
         <div class="flex items-center gap-4">
@@ -78,9 +100,11 @@
           </div>
         </div>
       </div>
+      </div>
+      <div class="space-y-6">
 
       <!-- Right Column - Contact Form -->
-      <div class="bg-[#87745D] rounded-2xl p-8">
+      <div class="rounded-lg border text-card-foreground shadow-sm p-8 bg-cream/10 backdrop-blur-sm border-cream/20 animate-fade-in">
         <form @submit.prevent="submitForm" class="space-y-6">
           
           <div>
@@ -159,6 +183,7 @@
           </div>
 
         </form>
+      </div>
       </div>
 
     </div>

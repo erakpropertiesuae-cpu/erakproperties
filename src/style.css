@@ -17,8 +17,10 @@
 
 :root {
   --sand: 35 40% 85%;
-  --cream: 40 50% 94%; 
-  --card-foreground: 35 15% 30%; /* example color */
+  --cream: 36 35% 92%; 
+  --shadow: 28 21% 19%;
+  --card-foreground: 35 15% 30%; 
+  --clay: 33 19% 45%;   /* example color */
 }
 .bg-cream\/10 {
   background-color: hsl(var(--cream) / 0.1);
@@ -26,6 +28,9 @@
 /* Custom background utility */
 .bg-sand {
   background-color: hsl(var(--sand));
+}
+.bg-clay {
+  background-color: hsl(var(--clay));
 }
 .bg-cream {
   background-color: hsl(var(--cream));
@@ -51,4 +56,10 @@
     width: 56px;
     height: 56px;
   }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
 }
