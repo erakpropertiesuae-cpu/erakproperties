@@ -52,18 +52,26 @@
 </section>
 </template>
 <script>
+import omniyat from '../assets/images/omniyat.png'
+import binghatti from '../assets/images/binghatti.png'
+import damac from '../assets/images/damac.png'
+import ellington from '../assets/images/ellington.png'
+import emaar from '../assets/images/emaar.png'
+import meraas from '../assets/images/meeras.png'
+import nakheel from '../assets/images/nakheel.png'
+import sobha from '../assets/images/sobha.png'
 export default {
   data() {
     return {
       partners: [
-        { name: "Omniyat",   logo: "/src/assets/images/omniyat.png" },
-        { name: "Binghatti", logo: "/src/assets/images/binghatti.png" },
-        { name: "Damac",     logo: "/src/assets/images/damac.png" },
-        { name: "Ellington", logo: "/src/assets/images/ellington.png" },
-        { name: "Emaar",     logo: "/src/assets/images/emaar.png" },
-        { name: "Meraas",    logo: "/src/assets/images/meeras.png" },
-        { name: "Nakheel",   logo: "/src/assets/images/nakheel.png" },
-        { name: "Sobha",     logo: "/src/assets/images/sobha.png" }
+        { name: "Omniyat",   logo: omniyat },
+        { name: "Binghatti", logo: binghatti },
+        { name: "Damac",     logo: damac },
+        { name: "Ellington", logo: ellington },
+        { name: "Emaar",     logo: emaar },
+        { name: "Meraas",    logo: meraas },
+        { name: "Nakheel",   logo: nakheel },
+        { name: "Sobha",     logo: sobha }
       ]
     };
   },
