@@ -1,6 +1,6 @@
 <template>
-<section id="about" class="py-20 bg-sand fade-up relative overflow-hidden">
-  <div class="max-w-6xl mx-auto px-6 md:px-8 text-center">
+<section id="about" class="py-20 bg-sand  relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 fade-up md:px-8 text-center">
 
     <h2 class="text-4xl md:text-5xl font-bold text-[#382E25] mb-6">
       About ERAK Properties
