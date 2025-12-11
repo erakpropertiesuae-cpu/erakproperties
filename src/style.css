@@ -25,6 +25,10 @@
 .bg-cream\/10 {
   background-color: hsl(var(--cream) / 0.1);
 }
+.text-shadow\/80 {
+  background-color: hsl(var(--shadow) / 0.8);
+}
+
 /* Custom background utility */
 .bg-sand {
   background-color: hsl(var(--sand));

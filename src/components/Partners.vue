@@ -60,6 +60,12 @@ import emaar from '../assets/images/emaar.png'
 import meraas from '../assets/images/meeras.png'
 import nakheel from '../assets/images/nakheel.png'
 import sobha from '../assets/images/sobha.png'
+import wasl from '../assets/images/wasl.png'
+import handh from '../assets/images/handh.png'
+import expo from '../assets/images/expo.png'
+import danube from '../assets/images/danube.png'
+
+
 export default {
   data() {
     return {
@@ -71,7 +77,11 @@ export default {
         { name: "Emaar",     logo: emaar },
         { name: "Meraas",    logo: meraas },
         { name: "Nakheel",   logo: nakheel },
-        { name: "Sobha",     logo: sobha }
+        { name: "Sobha",     logo: sobha },
+        {name : "Wasl",      logo: wasl},
+        {name : "handh",       logo: handh},
+        {name : "expo",      logo: expo},
+        {name : "danube",    logo: danube},
       ]
     };
   },

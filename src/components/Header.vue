@@ -1,5 +1,5 @@
 <template>
-<header class="sticky top-0 z-50 bg-[#C7B79D] text-[#3A2E26] shadow-md border-b border-[#87745D]">
+<header class="sticky top-0 z-50 bg-[#C7B79D] text-[#3A2E26] border-b border-[#E8DCC7] header-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  flex items-center justify-between">
 
     <!-- LOGO -->
@@ -58,3 +58,16 @@ const scrollToSection = (sectionId) => {
   mobileOpen.value = false
 }
 </script>
+<style scoped>
+:global(.header-shadow) {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+               0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+                       0 8px 10px -6px var(--tw-shadow-color);
+
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+              var(--tw-ring-shadow, 0 0 #0000),
+              var(--tw-shadow);
+}
+</style>
