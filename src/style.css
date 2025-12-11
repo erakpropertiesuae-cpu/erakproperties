@@ -40,7 +40,7 @@
   border-color: hsl(var(--border));
 }
 .bg-shadow {
-  background-color: hsl(var(--shadow) / .9);
+  background-color: hsl(var(--shadow));
 }
 .text-cream {
   color: hsl(var(--cream));

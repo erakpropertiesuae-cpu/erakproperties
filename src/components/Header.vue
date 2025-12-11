@@ -3,12 +3,14 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  flex items-center justify-between">
 
     <!-- LOGO -->
-    <div class="flex items-center">
+     <div class="flex items-center justify-between h-24">
+    <div class="flex-shrink-0">
       <img 
         src="/src/assets/images/erak-logo.png"
         alt="E R A K Properties"
-        class="h-10 md:h-12 w-auto object-contain"
+        class="h-28 sm:h-28 w-auto"
       />
+    </div>
     </div>
 
     <!-- DESKTOP NAV -->

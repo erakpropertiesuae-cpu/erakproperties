@@ -1,5 +1,5 @@
 <template>
-<section id="about" class="bg-[#D4C5AC]/40 py-32 fade-up">
+<section id="about" class="py-20 bg-sand fade-up relative overflow-hidden">
   <div class="max-w-6xl mx-auto px-6 md:px-8 text-center">
 
     <h2 class="text-4xl md:text-5xl font-bold text-[#382E25] mb-6">
