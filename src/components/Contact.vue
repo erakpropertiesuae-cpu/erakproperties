@@ -61,7 +61,8 @@
             </div>
             <div>
               <div class="text-[#D4C5AC] text-sm">Phone / WhatsApp</div>
-              <div class="font-semibold">+971 58 588 1007</div>
+             <div class="font-semibold">+971 XX XXX XXXX</div>
+
             </div>
           </div>
         </div>
@@ -118,6 +119,23 @@
               placeholder="Enter your full name"
             >
           </div>
+          <div>
+  <label for="phone" class="block text-sm font-medium text-[#D4C5AC] mb-1">
+    Phone Number *
+  </label>
+  <input
+    type="tel"
+    id="phone"
+    v-model="formData.phone"
+    required
+    class="w-full px-4 py-3 rounded-lg bg-[#382E25] border border-[#D4C5AC]
+           text-[#F5F1E6] placeholder-[#D4C5AC]
+           focus:outline-none focus:ring-2 focus:ring-[#D4C5AC] focus:border-transparent"
+    placeholder="+971 XX XXX XXXX"
+  >
+</div>
+
+          
           
           <div>
             <label for="email" class="block text-sm font-medium text-[#D4C5AC] mb-1">Email *</label>
@@ -204,6 +222,7 @@ const formMessage = ref({ text: '', type: '' })
 const formData = ref({
   fullName: '',
   email: '',
+  phone: '',
   country: '',
   budget: '',
   message: ''
@@ -228,6 +247,7 @@ const submitForm = async () => {
       {
         full_name: formData.value.fullName,
         email: formData.value.email,
+        phone: formData.value.phone,
         country: formData.value.country,
         budget: formData.value.budget,
         message: formData.value.message,
@@ -244,6 +264,7 @@ const submitForm = async () => {
     formData.value = {
       fullName: '',
       email: '',
+      phone: '',
       country: '',
       budget: '',
       message: ''
