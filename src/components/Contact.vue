@@ -278,27 +278,20 @@ const openWhatsAppChat = () => {
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }
-const normalizeUAEPhone = (input) => {
-  return input.replace(/\D/g, '') // digits only
-}
 
-const isValidUAEPhone = (phone) => {
-  return /^(971|0)5[024568]\d{7}$/.test(phone)
-}
 
 const submitForm = async () => {
-    phoneError.value = ''
+  phoneError.value = ''
 
-  const normalizedPhone = normalizeUAEPhone(formData.value.phone)
-
-  if (!isValidUAEPhone(normalizedPhone)) {
-    phoneError.value =
-      'Enter a valid UAE mobile number (05XXXXXXXX or 9715XXXXXXXX)'
+  // Validate local UAE mobile (9 digits starting with 5)
+  if (!/^5[024568]\d{7}$/.test(formData.value.phone)) {
+    phoneError.value = 'Enter a valid UAE mobile number (5XXXXXXXX)'
     return
   }
 
-  // store normalized value
-  formData.value.phone = normalizedPhone
+  // Build final phone number ONCE
+  const finalPhoneNumber = `971${formData.value.phone}`
+
   isSubmitting.value = true
   formMessage.value = { text: '', type: '' }
 
@@ -309,7 +302,7 @@ const submitForm = async () => {
       {
         full_name: formData.value.fullName,
         email: formData.value.email,
-        phone: formData.value.phone,
+        phone: finalPhoneNumber,
         country: formData.value.country,
         budget: formData.value.budget,
         message: formData.value.message,
@@ -346,4 +339,5 @@ const submitForm = async () => {
     }, 5000)
   }
 }
+
 </script>
