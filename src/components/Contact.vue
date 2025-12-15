@@ -119,21 +119,53 @@
               placeholder="Enter your full name"
             >
           </div>
-          <div>
-  <label for="phone" class="block text-sm font-medium text-[#D4C5AC] mb-1">
+<div>
+  <label class="block text-sm font-medium text-[#D4C5AC] mb-1">
     Phone Number *
   </label>
-  <input
-    type="tel"
-    id="phone"
-    v-model="formData.phone"
-    required
-    class="w-full px-4 py-3 rounded-lg bg-[#382E25] border border-[#D4C5AC]
-           text-[#F5F1E6] placeholder-[#D4C5AC]
-           focus:outline-none focus:ring-2 focus:ring-[#D4C5AC] focus:border-transparent"
-    placeholder="+971 XX XXX XXXX"
+
+  <div
+    class="flex items-center
+           bg-[#382E25]
+           border border-[#D4C5AC]
+           rounded-lg
+           focus-within:ring-2 focus-within:ring-[#D4C5AC]"
   >
+    <!-- Hardcoded Country Code -->
+    <div
+      class="px-4 py-3
+             text-[#F5F1E6]
+             font-semibold
+             border-r border-[#D4C5AC]/50
+             bg-[#2E241D]
+             rounded-l-lg"
+    >
+      +971
+    </div>
+
+    <!-- Phone Number Input -->
+    <input
+      type="tel"
+      v-model="formData.phone"
+      maxlength="9"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      @input="handleLocalPhoneInput"
+      required
+      placeholder="XXXXXXXXX"
+      class="flex-1 px-4 py-3
+             bg-transparent
+             text-[#F5F1E6]
+             placeholder-[#D4C5AC]
+             focus:outline-none"
+    />
+  </div>
+
+  <p v-if="phoneError" class="text-red-400 text-sm mt-1">
+    {{ phoneError }}
+  </p>
 </div>
+
 
           
           
@@ -215,6 +247,17 @@
 <script setup>
 import { ref } from 'vue'
 import emailjs from 'emailjs-com'
+const phoneError = ref('')
+const handleLocalPhoneInput = (e) => {
+  let value = e.target.value.replace(/\D/g, '')
+
+  // UAE mobile without country code = 9 digits
+  if (value.length > 9) {
+    value = value.slice(0, 9)
+  }
+
+  formData.value.phone = value
+}
 
 const isSubmitting = ref(false)
 const formMessage = ref({ text: '', type: '' })
@@ -235,8 +278,27 @@ const openWhatsAppChat = () => {
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }
+const normalizeUAEPhone = (input) => {
+  return input.replace(/\D/g, '') // digits only
+}
+
+const isValidUAEPhone = (phone) => {
+  return /^(971|0)5[024568]\d{7}$/.test(phone)
+}
 
 const submitForm = async () => {
+    phoneError.value = ''
+
+  const normalizedPhone = normalizeUAEPhone(formData.value.phone)
+
+  if (!isValidUAEPhone(normalizedPhone)) {
+    phoneError.value =
+      'Enter a valid UAE mobile number (05XXXXXXXX or 9715XXXXXXXX)'
+    return
+  }
+
+  // store normalized value
+  formData.value.phone = normalizedPhone
   isSubmitting.value = true
   formMessage.value = { text: '', type: '' }
 

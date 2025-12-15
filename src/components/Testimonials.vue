@@ -83,6 +83,22 @@ export default {
           text: "ERAK Properties provided exceptional market insights and helped me secure a prime Dubai Marina apartment with excellent ROI potential."
         },
         {
+          name:"Karen Jenner ",
+          location: "UK",
+          text:"Excellent understanding of off-plan and resale opportunities. Every step was explained clearly, making the investment process stress-free."
+        },
+        {
+          name:"William Benner ",
+          location: "US",
+          text:"As an overseas investor, I needed someone reliable on the ground in Dubai. Lawrence provided clear advice, handled everything professionally, and helped me secure a strong rental return."
+        },
+        {
+          name:"Madhiarasan ",
+          location: "Srilanka",
+          text:"I have worked with ERAK properties in the Dubai real estate market for several years. His understanding of pricing, locations, and negotiation always delivers results. I fully trust him and his new company."
+        },
+
+        {
           name: "Sarah Chen",
           initials: "SC",
           location: "Singapore Investor",

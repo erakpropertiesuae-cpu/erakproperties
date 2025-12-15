@@ -36,6 +36,7 @@
 
       <div class="flex items-center justify-center pt-6">
         <button
+         @click="scrollToSection('contact')"
           class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-[#D4C5AC] hover:bg-[#D4C5AC]/90 text-[#382E25] border-none shadow-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto text-base sm:text-lg px-8 py-6"
         >
           Contact Us
@@ -49,3 +50,18 @@
 
 </section>
 </template>
+<script>
+export default {
+  methods: {
+    scrollToSection(id) {
+      const section = document.getElementById(id)
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }
+  }
+}
+</script>
